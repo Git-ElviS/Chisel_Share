@@ -1,0 +1,482 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.4.20)  20 APR 2022 11:12
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./tutorial-2.tex
+(tutorial-2.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-04-10>
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/gene
+ric/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks17
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/geometry/geometry.cfg))
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics/epsfig.sty
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen147
+\Gin@req@width=\dimen148
+)
+\epsfxsize=\dimen149
+\epsfysize=\dimen150
+)
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/psnfss/palatino.sty
+Package: palatino 2020/03/25 PSNFSS-v9.3 (SPQR) 
+)
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/fancybox/fancybox.sty
+Package: fancybox 2010/05/15 1.4
+
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+\@fancybox=\box50
+\shadowsize=\dimen151
+\@Sbox=\box51
+\do@VerbBox=\toks18
+\the@fancyput=\toks19
+\this@fancyput=\toks20
+\EndVerbatimTokens=\toks21
+\Verbatim@Outfile=\write3
+\Verbatim@Infile=\read2
+)
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/listings/listings.sty
+\lst@mode=\count196
+\lst@gtempboxa=\box52
+\lst@token=\toks22
+\lst@length=\count197
+\lst@currlwidth=\dimen152
+\lst@column=\count198
+\lst@pos=\count199
+\lst@lostspace=\dimen153
+\lst@width=\dimen154
+\lst@newlines=\count266
+\lst@lineno=\count267
+\lst@maxwidth=\dimen155
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count268
+\lst@skipnumbers=\count269
+\lst@framebox=\box53
+)
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (../style/scala.tex
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 11
+2.
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/psnfss/t1ppl.fd
+File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
+))
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/bera/beramono.sty
+Package: beramono 2004/01/31 (WaS)
+)
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/microtype/microtype.sty
+Package: microtype 2022/03/14 v3.0d Micro-typographical refinements (RS)
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count270
+)
+\MT@toks=\toks23
+\MT@tempbox=\box54
+\MT@count=\count271
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1027.
+LaTeX Info: Redefining \leftprotrusion on input line 1028.
+LaTeX Info: Redefining \rightprotrusion on input line 1036.
+LaTeX Info: Redefining \textls on input line 1195.
+\MT@outer@kern=\dimen156
+LaTeX Info: Redefining \textmicrotypecontext on input line 1781.
+\MT@listname@count=\count272
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2022/03/14 v3.0d Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 900.
+LaTeX Info: Redefining \lslig on input line 900.
+\MT@outer@space=\skip49
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/microtype/microtype.cfg
+File: microtype.cfg 2022/03/14 v3.0d microtype main configuration file (RS)
+))
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 6.
+
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/bera/t1fvm.fd
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 7.38007pt on input line 6.
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics/color.sty
+Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+))
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-04-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count273
+\l__pdf_internal_box=\box55
+)
+No file tutorial-2.aux.
+\openout1 = `tutorial-2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=0.0pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=10.0pt
+* \footskip=37.0pt
+* \marginparwidth=0.0pt
+* \marginparsep=0.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumntrue
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/cont
+ext/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count274
+\scratchdimen=\dimen157
+\scratchbox=\box56
+\nofMPsegments=\count275
+\nofMParguments=\count276
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count277
+\MPscratchDim=\dimen158
+\MPnumerator=\count278
+\makeMPintoPDFobject=\count279
+\everyMPtoPDFconversion=\toks25
+)
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/00miktex/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+\c@lstlisting=\count280
+LaTeX Info: Redefining \microtypecontext on input line 91.
+Package microtype Info: Applying patch `item' on input line 91.
+Package microtype Info: Applying patch `toc' on input line 91.
+Package microtype Info: Applying patch `eqnum' on input line 91.
+Package microtype Info: Applying patch `footnote' on input line 91.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 91.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/microtype/mt-ppl.cfg
+File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
+)
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 92.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 92.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 92.
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 9.84009pt on input line 92.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `fvm' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/data/fonts/ma
+p/pdftex/pdftex.map}
+
+
+]
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 8.20007pt on input line 218.
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 6.56006pt on input line 231.
+ [2]
+
+LaTeX Warning: Reference `tbl:chisel-operators' on page 3 undefined on input li
+ne 332.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 335.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 335.
+[3] [4]
+
+LaTeX Warning: Reference `sec:funconstructor' on page 5 undefined on input line
+ 577.
+
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 6
+48.
+
+(/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/tex/late
+x/psnfss/ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+) [5]
+<../tutorial/figs/DUT.pdf, id=22, 455.7025pt x 166.6225pt>
+File: ../tutorial/figs/DUT.pdf Graphic file (type pdf)
+<use ../tutorial/figs/DUT.pdf>
+Package pdftex.def Info: ../tutorial/figs/DUT.pdf  used on input line 731.
+(pdftex.def)             Requested size: 211.38832pt x 77.29306pt.
+
+
+LaTeX Warning: Reference `fig:dut' on page 6 undefined on input line 789.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 784--791
+\T1/ppl/m/n/10 (+20) When \T1/fvm/m/n/10 --test \T1/ppl/m/n/10 (+20) is given a
+s an ar-gu-ment to
+ []
+
+
+Underfull \hbox (badness 2469) in paragraph at lines 784--791
+\T1/fvm/m/n/10 chiselMainTest\T1/ppl/m/n/10 (+20) , a tester in-stance runs the
+ De-
+ []
+
+[6 <../tutorial/figs/DUT.pdf>]
+Underfull \hbox (badness 5022) in paragraph at lines 823--832
+[]\T1/ppl/m/n/10 (+20) Other com-mand ar-gu-ments are as fol-lows:
+ []
+
+[7]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 978.
+<figs/condupdates.pdf, id=58, 407.5225pt x 360.34625pt>
+File: figs/condupdates.pdf Graphic file (type pdf)
+<use figs/condupdates.pdf>
+Package pdftex.def Info: figs/condupdates.pdf  used on input line 993.
+(pdftex.def)             Requested size: 216.81pt x 191.71388pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:condupdates' on page 8 undefined on input line 10
+01.
+
+[8 <./figs/condupdates.pdf>] [9]
+Underfull \vbox (badness 1189) has occurred while \output is active []
+
+ [10]
+<figs/cpu.png, id=86, 530.98375pt x 527.9725pt>
+File: figs/cpu.png Graphic file (type png)
+<use figs/cpu.png>
+Package pdftex.def Info: figs/cpu.png  used on input line 1493.
+(pdftex.def)             Requested size: 216.81pt x 215.58394pt.
+
+
+LaTeX Warning: Reference `fig:cpu' on page 11 undefined on input line 1498.
+
+[11] [12 <./figs/cpu.png>]
+
+LaTeX Warning: Reference `sec:parameterization' on page 13 undefined on input l
+ine 1644.
+
+[13]
+
+LaTeX Warning: Reference `fig:fifo' on page 14 undefined on input line 1810.
+
+
+LaTeX Warning: Reference `fig:fifo' on page 14 undefined on input line 1885.
+
+[14]
+Underfull \hbox (badness 2865) in paragraph at lines 1988--1989
+[][][]\T1/fvm/m/n/10 int clock(reset) []\T1/ppl/m/n/10 (+20) func-tion which co
+m-putes
+ []
+
+
+LaTeX Warning: Citation `gel' on page 15 undefined on input line 2083.
+
+[15] [16
+
+] (tutorial-2.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 7475 strings out of 478553
+ 115430 string characters out of 2830175
+ 632179 words of memory out of 3000000
+ 25282 multiletter control sequences out of 15000+600000
+ 512766 words of font info for 282 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 70i,10n,76p,1009b,1684s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{/Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/fonts/
+enc/dvips/base/8r.enc}</Users/caizhongxuan/Library/Application Support/MiKTeX/t
+exmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/caizhongxuan/Li
+brary/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb></Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/insta
+ll/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/caizhongxuan/Library/Applic
+ation Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb></Users/caizhongxuan/Library/Application Suppor
+t/MiKTeX/texmfs/install/fonts/type1/bera/fvmr8a.pfb></Users/caizhongxuan/Librar
+y/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/palatino/uplb8a.pfb
+></Users/caizhongxuan/Library/Application Support/MiKTeX/texmfs/install/fonts/t
+ype1/urw/palatino/uplr8a.pfb></Users/caizhongxuan/Library/Application Support/M
+iKTeX/texmfs/install/fonts/type1/urw/palatino/uplr8a.pfb></Users/caizhongxuan/L
+ibrary/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/palatino/uplri
+8a.pfb>
+Output written on tutorial-2.pdf (16 pages, 658575 bytes).
+PDF statistics:
+ 154 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 65040 words of extra memory for PDF output out of 74296 (max. 10000000)
+

@@ -1,0 +1,37 @@
+[
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~SimpleALU|SimpleALU>io_out",
+    "sources":[
+      "~SimpleALU|SimpleALU>io_opcode",
+      "~SimpleALU|SimpleALU>io_a",
+      "~SimpleALU|SimpleALU>io_b"
+    ]
+  },
+  {
+    "class":"logger.LogLevelAnnotation",
+    "globalLogLevel":{
+      
+    }
+  },
+  {
+    "class":"firrtl.options.TargetDirAnnotation",
+    "directory":"test_run_dir/examples/SimpleALU"
+  },
+  {
+    "class":"firrtl.stage.phases.DriverCompatibility$TopNameAnnotation",
+    "topName":"SimpleALU"
+  },
+  {
+    "class":"firrtl.options.OutputAnnotationFileAnnotation",
+    "file":"SimpleALU"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/examples/SimpleALU"
+  }
+]

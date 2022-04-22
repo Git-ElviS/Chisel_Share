@@ -1,0 +1,44 @@
+[
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~Risc|Risc>io_valid",
+    "sources":[
+      "~Risc|Risc>io_isWr",
+      "~Risc|Risc>io_boot"
+    ]
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~Risc|Risc>io_out",
+    "sources":[
+      "~Risc|Risc>io_isWr",
+      "~Risc|Risc>io_boot"
+    ]
+  },
+  {
+    "class":"logger.LogLevelAnnotation",
+    "globalLogLevel":{
+      
+    }
+  },
+  {
+    "class":"firrtl.options.TargetDirAnnotation",
+    "directory":"test_run_dir/examples/Risc"
+  },
+  {
+    "class":"firrtl.stage.phases.DriverCompatibility$TopNameAnnotation",
+    "topName":"Risc"
+  },
+  {
+    "class":"firrtl.options.OutputAnnotationFileAnnotation",
+    "file":"Risc"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/examples/Risc"
+  }
+]

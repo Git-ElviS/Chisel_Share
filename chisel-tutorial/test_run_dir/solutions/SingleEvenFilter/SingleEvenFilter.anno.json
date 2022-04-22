@@ -1,0 +1,43 @@
+[
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~SingleEvenFilter|SingleEvenFilter>io_out_valid",
+    "sources":[
+      "~SingleEvenFilter|SingleEvenFilter>io_in_valid",
+      "~SingleEvenFilter|SingleEvenFilter>io_in_bits"
+    ]
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~SingleEvenFilter|SingleEvenFilter>io_out_bits",
+    "sources":[
+      "~SingleEvenFilter|SingleEvenFilter>io_in_bits"
+    ]
+  },
+  {
+    "class":"logger.LogLevelAnnotation",
+    "globalLogLevel":{
+      
+    }
+  },
+  {
+    "class":"firrtl.options.TargetDirAnnotation",
+    "directory":"test_run_dir/solutions/SingleEvenFilter"
+  },
+  {
+    "class":"firrtl.stage.phases.DriverCompatibility$TopNameAnnotation",
+    "topName":"SingleEvenFilter"
+  },
+  {
+    "class":"firrtl.options.OutputAnnotationFileAnnotation",
+    "file":"SingleEvenFilter"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/solutions/SingleEvenFilter"
+  }
+]

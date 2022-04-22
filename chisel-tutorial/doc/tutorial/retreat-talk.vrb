@@ -1,0 +1,12 @@
+\frametitle{Future}
+
+\begin{itemize}
+\item Automated design space exploration
+\item Insertion of activity counters for power monitors
+\item Automatic fault insertion
+\item Faster and more scalable simulation
+\item More generators
+\item More little languages
+\item Compilation to UCLID
+\end{itemize}
+
