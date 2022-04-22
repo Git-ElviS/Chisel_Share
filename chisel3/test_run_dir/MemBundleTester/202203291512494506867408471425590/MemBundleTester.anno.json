@@ -1,0 +1,10 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"/Users/caizhongxuan/Chisel/1_code/chisel3/test_run_dir/MemBundleTester/202203291512494506867408471425590"
+  }
+]

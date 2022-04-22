@@ -1,0 +1,22 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.SystemVerilogEmitter"
+  },
+  {
+    "class":"chiselTests.PrintfAnnotation",
+    "target":"~PrintfAnnotationTest|PrintfAnnotationTest>farewell"
+  },
+  {
+    "class":"chiselTests.PrintfAnnotation",
+    "target":"~PrintfAnnotationTest|PrintfAnnotationTest>printf"
+  },
+  {
+    "class":"chiselTests.PrintfAnnotation",
+    "target":"~PrintfAnnotationTest|PrintfAnnotationTest>howdy"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/PrintfAnnotationTest"
+  }
+]

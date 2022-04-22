@@ -1,0 +1,35 @@
+[
+  {
+    "class":"chisel3.experimental.Trace$TraceNameAnnotation",
+    "target":"~M|M>b_1",
+    "chiselTarget":"~M|M>b[1]"
+  },
+  {
+    "class":"chisel3.experimental.Trace$TraceNameAnnotation",
+    "target":"~M|M>b_0",
+    "chiselTarget":"~M|M>b[0]"
+  },
+  {
+    "class":"chisel3.experimental.Trace$TraceNameAnnotation",
+    "target":"~M|M>b_0",
+    "chiselTarget":"~M|M>b"
+  },
+  {
+    "class":"chisel3.experimental.Trace$TraceNameAnnotation",
+    "target":"~M|M>b_1",
+    "chiselTarget":"~M|M>b"
+  },
+  {
+    "class":"chisel3.experimental.Trace$TraceNameAnnotation",
+    "target":"~M|M>a",
+    "chiselTarget":"~M|M>a"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"/Users/caizhongxuan/Chisel/1_code/chisel3/test_run_dir/NestedModule/202203291507344780835454762127101"
+  }
+]

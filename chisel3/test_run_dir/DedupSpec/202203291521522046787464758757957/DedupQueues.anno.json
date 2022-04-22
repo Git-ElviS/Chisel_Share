@@ -1,0 +1,34 @@
+[
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~DedupQueues|Queue",
+    "duplicate":"~DedupQueues|DedupQueues/queues_0:Queue",
+    "index":0.0
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~DedupQueues|Queue_1",
+    "duplicate":"~DedupQueues|DedupQueues/queues_1:Queue",
+    "index":0.25
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~DedupQueues|Queue_2",
+    "duplicate":"~DedupQueues|DedupQueues/queues_2:Queue",
+    "index":0.5
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~DedupQueues|Queue_3",
+    "duplicate":"~DedupQueues|DedupQueues/queues_3:Queue",
+    "index":0.75
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/DedupSpec/202203291521522046787464758757957"
+  }
+]

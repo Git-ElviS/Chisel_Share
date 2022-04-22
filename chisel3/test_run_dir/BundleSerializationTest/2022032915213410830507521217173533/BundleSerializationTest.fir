@@ -1,0 +1,45 @@
+circuit BundleSerializationTest :
+  module BundleSerializationTest :
+    input clock : Clock
+    input reset : UInt<1>
+    output io : { }
+
+    wire bundle : { foo : UInt<16>, bar : UInt<16>} @[BundleSpec.scala 44:22]
+    bundle.foo <= UInt<13>("h1234") @[BundleSpec.scala 45:16]
+    bundle.bar <= UInt<15>("h5678") @[BundleSpec.scala 46:16]
+    node uint = cat(bundle.foo, bundle.bar) @[BundleSpec.scala 48:23]
+    node _T = eq(uint, UInt<32>("h12345678")) @[BundleSpec.scala 50:17]
+    node _T_1 = bits(reset, 0, 0) @[BundleSpec.scala 50:11]
+    node _T_2 = eq(_T_1, UInt<1>("h0")) @[BundleSpec.scala 50:11]
+    when _T_2 : @[BundleSpec.scala 50:11]
+      assert(clock, _T, UInt<1>("h1"), "") : assert @[BundleSpec.scala 50:11]
+      node _T_3 = eq(_T, UInt<1>("h0")) @[BundleSpec.scala 50:11]
+      when _T_3 : @[BundleSpec.scala 50:11]
+        printf(clock, UInt<1>("h1"), "Assertion failed\n    at BundleSpec.scala:50 assert(uint === \"h12345678\".asUInt(32.W))\n") : printf @[BundleSpec.scala 50:11]
+    wire bundle2 : { foo : UInt<16>, bar : UInt<16>} @[BundleSpec.scala 52:32]
+    wire _bundle2_WIRE : UInt<32>
+    _bundle2_WIRE <= uint
+    node _bundle2_T = bits(_bundle2_WIRE, 15, 0) @[BundleSpec.scala 52:32]
+    bundle2.bar <= _bundle2_T @[BundleSpec.scala 52:32]
+    node _bundle2_T_1 = bits(_bundle2_WIRE, 31, 16) @[BundleSpec.scala 52:32]
+    bundle2.foo <= _bundle2_T_1 @[BundleSpec.scala 52:32]
+    node _T_4 = eq(UInt<13>("h1234"), bundle2.foo) @[BundleSpec.scala 53:21]
+    node _T_5 = bits(reset, 0, 0) @[BundleSpec.scala 53:11]
+    node _T_6 = eq(_T_5, UInt<1>("h0")) @[BundleSpec.scala 53:11]
+    when _T_6 : @[BundleSpec.scala 53:11]
+      assert(clock, _T_4, UInt<1>("h1"), "") : assert_1 @[BundleSpec.scala 53:11]
+      node _T_7 = eq(_T_4, UInt<1>("h0")) @[BundleSpec.scala 53:11]
+      when _T_7 : @[BundleSpec.scala 53:11]
+        printf(clock, UInt<1>("h1"), "Assertion failed\n    at BundleSpec.scala:53 assert(0x1234.U === bundle2.foo)\n") : printf_1 @[BundleSpec.scala 53:11]
+    node _T_8 = eq(UInt<15>("h5678"), bundle2.bar) @[BundleSpec.scala 54:21]
+    node _T_9 = bits(reset, 0, 0) @[BundleSpec.scala 54:11]
+    node _T_10 = eq(_T_9, UInt<1>("h0")) @[BundleSpec.scala 54:11]
+    when _T_10 : @[BundleSpec.scala 54:11]
+      assert(clock, _T_8, UInt<1>("h1"), "") : assert_2 @[BundleSpec.scala 54:11]
+      node _T_11 = eq(_T_8, UInt<1>("h0")) @[BundleSpec.scala 54:11]
+      when _T_11 : @[BundleSpec.scala 54:11]
+        printf(clock, UInt<1>("h1"), "Assertion failed\n    at BundleSpec.scala:54 assert(0x5678.U === bundle2.bar)\n") : printf_2 @[BundleSpec.scala 54:11]
+    node _T_12 = bits(reset, 0, 0) @[BundleSpec.scala 55:9]
+    node _T_13 = eq(_T_12, UInt<1>("h0")) @[BundleSpec.scala 55:9]
+    when _T_13 : @[BundleSpec.scala 55:9]
+      stop(clock, UInt<1>("h1"), 0) : stop @[BundleSpec.scala 55:9]

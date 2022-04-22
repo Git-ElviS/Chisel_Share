@@ -1,0 +1,22 @@
+[
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~AnalogSpec_Anon|AnalogReaderBlackBox",
+    "duplicate":"~AnalogSpec_Anon|AnalogSpec_Anon/mods_0:AnalogReaderBlackBox",
+    "index":0.3333333333333333
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~AnalogSpec_Anon|AnalogReaderBlackBox_1",
+    "duplicate":"~AnalogSpec_Anon|AnalogSpec_Anon/mods_1:AnalogReaderBlackBox",
+    "index":0.6666666666666666
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"/Users/caizhongxuan/Chisel/1_code/chisel3/test_run_dir/AnalogSpec_Anon/202203291522369645534702217560230"
+  }
+]

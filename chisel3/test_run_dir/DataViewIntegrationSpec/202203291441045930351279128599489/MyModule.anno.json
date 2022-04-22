@@ -1,0 +1,6 @@
+[
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~MyModule|Queue>enq_ptr_value"
+  }
+]

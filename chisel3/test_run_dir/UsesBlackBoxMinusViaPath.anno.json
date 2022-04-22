@@ -1,0 +1,19 @@
+[
+  {
+    "class":"firrtl.stage.FirrtlFileAnnotation",
+    "file":"test_run_dir/UsesBlackBoxMinusViaPath.lo.fir"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.LowFirrtlEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxPathAnno",
+    "target":"UsesBlackBoxMinusViaPath.BlackBoxMinusPath",
+    "path":"/Users/caizhongxuan/Chisel/1_code/chisel3/src/test/resources/chisel3/BlackBoxTest.v"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir"
+  }
+]

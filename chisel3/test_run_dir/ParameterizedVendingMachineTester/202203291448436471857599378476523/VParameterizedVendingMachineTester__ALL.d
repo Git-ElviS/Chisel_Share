@@ -1,0 +1,21 @@
+VParameterizedVendingMachineTester__ALL.o: \
+  VParameterizedVendingMachineTester__ALL.cpp \
+  VParameterizedVendingMachineTester.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilatedos.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_config.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_types.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_funcs.h \
+  VParameterizedVendingMachineTester.cpp \
+  VParameterizedVendingMachineTester__Syms.h \
+  VParameterizedVendingMachineTester___024root.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_vcd_c.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_trace.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_trace_defs.h \
+  VParameterizedVendingMachineTester___024root__DepSet_hef4b087f__0.cpp \
+  VParameterizedVendingMachineTester___024root__DepSet_h817e0c24__0.cpp \
+  VParameterizedVendingMachineTester__Trace__0.cpp \
+  VParameterizedVendingMachineTester___024root__Slow.cpp \
+  VParameterizedVendingMachineTester___024root__DepSet_h817e0c24__0__Slow.cpp \
+  VParameterizedVendingMachineTester__Syms.cpp \
+  VParameterizedVendingMachineTester__Trace__0__Slow.cpp

@@ -1,0 +1,38 @@
+circuit BundleLiteralSpec_Anon :
+  module BundleLiteralSpec_Anon :
+    input clock : Clock
+    input reset : UInt<1>
+    output io : { }
+
+    wire bundleWire : { a : UInt<8>, b : UInt<1>, c : UInt<1>} @[BundleLiteralSpec.scala 181:30]
+    bundleWire.c <= UInt<1>("h1") @[BundleLiteralSpec.scala 183:20]
+    bundleWire.b <= UInt<1>("h1") @[BundleLiteralSpec.scala 183:20]
+    bundleWire.a <= UInt<6>("h2a") @[BundleLiteralSpec.scala 183:20]
+    node _T = eq(bundleWire.a, UInt<6>("h2a")) @[BundleLiteralSpec.scala 185:37]
+    node _T_1 = bits(reset, 0, 0) @[BundleLiteralSpec.scala 185:23]
+    node _T_2 = eq(_T_1, UInt<1>("h0")) @[BundleLiteralSpec.scala 185:23]
+    when _T_2 : @[BundleLiteralSpec.scala 185:23]
+      assert(clock, _T, UInt<1>("h1"), "") : assert @[BundleLiteralSpec.scala 185:23]
+      node _T_3 = eq(_T, UInt<1>("h0")) @[BundleLiteralSpec.scala 185:23]
+      when _T_3 : @[BundleLiteralSpec.scala 185:23]
+        printf(clock, UInt<1>("h1"), "Assertion failed\n    at BundleLiteralSpec.scala:185 chisel3.assert(bundleWire.a === 42.U)\n") : printf @[BundleLiteralSpec.scala 185:23]
+    node _T_4 = eq(bundleWire.b, UInt<1>("h1")) @[BundleLiteralSpec.scala 186:37]
+    node _T_5 = bits(reset, 0, 0) @[BundleLiteralSpec.scala 186:23]
+    node _T_6 = eq(_T_5, UInt<1>("h0")) @[BundleLiteralSpec.scala 186:23]
+    when _T_6 : @[BundleLiteralSpec.scala 186:23]
+      assert(clock, _T_4, UInt<1>("h1"), "") : assert_1 @[BundleLiteralSpec.scala 186:23]
+      node _T_7 = eq(_T_4, UInt<1>("h0")) @[BundleLiteralSpec.scala 186:23]
+      when _T_7 : @[BundleLiteralSpec.scala 186:23]
+        printf(clock, UInt<1>("h1"), "Assertion failed\n    at BundleLiteralSpec.scala:186 chisel3.assert(bundleWire.b === true.B)\n") : printf_1 @[BundleLiteralSpec.scala 186:23]
+    node _T_8 = eq(bundleWire.c, UInt<1>("h1")) @[BundleLiteralSpec.scala 187:37]
+    node _T_9 = bits(reset, 0, 0) @[BundleLiteralSpec.scala 187:23]
+    node _T_10 = eq(_T_9, UInt<1>("h0")) @[BundleLiteralSpec.scala 187:23]
+    when _T_10 : @[BundleLiteralSpec.scala 187:23]
+      assert(clock, _T_8, UInt<1>("h1"), "") : assert_2 @[BundleLiteralSpec.scala 187:23]
+      node _T_11 = eq(_T_8, UInt<1>("h0")) @[BundleLiteralSpec.scala 187:23]
+      when _T_11 : @[BundleLiteralSpec.scala 187:23]
+        printf(clock, UInt<1>("h1"), "Assertion failed\n    at BundleLiteralSpec.scala:187 chisel3.assert(bundleWire.c === MyEnum.sB)\n") : printf_2 @[BundleLiteralSpec.scala 187:23]
+    node _T_12 = bits(reset, 0, 0) @[BundleLiteralSpec.scala 188:13]
+    node _T_13 = eq(_T_12, UInt<1>("h0")) @[BundleLiteralSpec.scala 188:13]
+    when _T_13 : @[BundleLiteralSpec.scala 188:13]
+      stop(clock, UInt<1>("h1"), 0) : stop @[BundleLiteralSpec.scala 188:13]

@@ -1,0 +1,38 @@
+circuit AsTypeOfBundleZeroWidthTester :
+  module AsTypeOfBundleZeroWidthTester :
+    input clock : Clock
+    input reset : UInt<1>
+    output io : { }
+
+    wire bunAsTypeOf : { a : UInt<0>, b : UInt<1>, c : UInt<0>} @[AsTypeOfTester.scala 36:33]
+    bunAsTypeOf.c is invalid @[AsTypeOfTester.scala 36:33]
+    bunAsTypeOf.b <= UInt<1>("h1") @[AsTypeOfTester.scala 36:33]
+    bunAsTypeOf.a is invalid @[AsTypeOfTester.scala 36:33]
+    node _T = eq(bunAsTypeOf.a, UInt<1>("h0")) @[AsTypeOfTester.scala 38:24]
+    node _T_1 = bits(reset, 0, 0) @[AsTypeOfTester.scala 38:9]
+    node _T_2 = eq(_T_1, UInt<1>("h0")) @[AsTypeOfTester.scala 38:9]
+    when _T_2 : @[AsTypeOfTester.scala 38:9]
+      assert(clock, _T, UInt<1>("h1"), "") : assert @[AsTypeOfTester.scala 38:9]
+      node _T_3 = eq(_T, UInt<1>("h0")) @[AsTypeOfTester.scala 38:9]
+      when _T_3 : @[AsTypeOfTester.scala 38:9]
+        printf(clock, UInt<1>("h1"), "Assertion failed\n    at AsTypeOfTester.scala:38 assert(bunAsTypeOf.a === 0.U)\n") : printf @[AsTypeOfTester.scala 38:9]
+    node _T_4 = eq(bunAsTypeOf.b, UInt<1>("h1")) @[AsTypeOfTester.scala 39:24]
+    node _T_5 = bits(reset, 0, 0) @[AsTypeOfTester.scala 39:9]
+    node _T_6 = eq(_T_5, UInt<1>("h0")) @[AsTypeOfTester.scala 39:9]
+    when _T_6 : @[AsTypeOfTester.scala 39:9]
+      assert(clock, _T_4, UInt<1>("h1"), "") : assert_1 @[AsTypeOfTester.scala 39:9]
+      node _T_7 = eq(_T_4, UInt<1>("h0")) @[AsTypeOfTester.scala 39:9]
+      when _T_7 : @[AsTypeOfTester.scala 39:9]
+        printf(clock, UInt<1>("h1"), "Assertion failed\n    at AsTypeOfTester.scala:39 assert(bunAsTypeOf.b === 1.U)\n") : printf_1 @[AsTypeOfTester.scala 39:9]
+    node _T_8 = eq(bunAsTypeOf.c, UInt<1>("h0")) @[AsTypeOfTester.scala 40:24]
+    node _T_9 = bits(reset, 0, 0) @[AsTypeOfTester.scala 40:9]
+    node _T_10 = eq(_T_9, UInt<1>("h0")) @[AsTypeOfTester.scala 40:9]
+    when _T_10 : @[AsTypeOfTester.scala 40:9]
+      assert(clock, _T_8, UInt<1>("h1"), "") : assert_2 @[AsTypeOfTester.scala 40:9]
+      node _T_11 = eq(_T_8, UInt<1>("h0")) @[AsTypeOfTester.scala 40:9]
+      when _T_11 : @[AsTypeOfTester.scala 40:9]
+        printf(clock, UInt<1>("h1"), "Assertion failed\n    at AsTypeOfTester.scala:40 assert(bunAsTypeOf.c === 0.U)\n") : printf_2 @[AsTypeOfTester.scala 40:9]
+    node _T_12 = bits(reset, 0, 0) @[AsTypeOfTester.scala 42:7]
+    node _T_13 = eq(_T_12, UInt<1>("h0")) @[AsTypeOfTester.scala 42:7]
+    when _T_13 : @[AsTypeOfTester.scala 42:7]
+      stop(clock, UInt<1>("h1"), 0) : stop @[AsTypeOfTester.scala 42:7]

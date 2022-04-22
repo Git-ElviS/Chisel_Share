@@ -1,0 +1,7 @@
+[
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:InstantiatesHasVec/i1:HasVec_1>x[0].x",
+    "tag":"blah"
+  }
+]

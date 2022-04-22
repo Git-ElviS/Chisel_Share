@@ -1,0 +1,10 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"/Users/caizhongxuan/Chisel/1_code/chisel3/test_run_dir/TabulateTester2D/202203291528016362489169832289843"
+  }
+]

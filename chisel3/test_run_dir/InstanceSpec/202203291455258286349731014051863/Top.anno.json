@@ -1,0 +1,12 @@
+[
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:HasMems>mem",
+    "tag":"Mem"
+  },
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:HasMems>syncReadMem",
+    "tag":"SyncReadMem"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.SystemVerilogEmitter"
+  },
+  {
+    "class":"chiselTests.VerifAnnotation",
+    "target":"~AnnotationTest|AnnotationTest>asst"
+  },
+  {
+    "class":"chiselTests.VerifAnnotation",
+    "target":"~AnnotationTest|AnnotationTest>assm"
+  },
+  {
+    "class":"chiselTests.VerifAnnotation",
+    "target":"~AnnotationTest|AnnotationTest>cov"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/VerificationAnnotationTests"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~AnnotationTest|AnnotationTest>io_out",
+    "sources":[
+      "~AnnotationTest|AnnotationTest>io_in"
+    ]
+  }
+]

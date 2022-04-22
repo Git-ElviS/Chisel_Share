@@ -1,0 +1,3 @@
+/Users/caizhongxuan/Chisel/1_code/chisel3/test_run_dir/complex_memory_load/HasComplexMemory.HasComplexMemory.memory_a.v
+/Users/caizhongxuan/Chisel/1_code/chisel3/test_run_dir/complex_memory_load/HasComplexMemory.HasComplexMemory.memory_b.v
+/Users/caizhongxuan/Chisel/1_code/chisel3/test_run_dir/complex_memory_load/HasComplexMemory.HasComplexMemory.memory_c.v

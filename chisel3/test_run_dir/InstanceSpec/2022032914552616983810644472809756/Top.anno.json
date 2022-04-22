@@ -1,0 +1,17 @@
+[
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:MyModule>out",
+    "tag":"out"
+  },
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:MyModule>in",
+    "tag":"foo"
+  },
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:MyModule>sum",
+    "tag":"bar"
+  }
+]

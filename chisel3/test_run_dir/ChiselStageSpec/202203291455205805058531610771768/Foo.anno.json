@@ -1,0 +1,10 @@
+[
+  {
+    "class":"firrtl.EmitAllModulesAnnotation",
+    "emitter":"firrtl.HighFirrtlEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/ChiselStageSpec/202203291455205805058531610771768"
+  }
+]

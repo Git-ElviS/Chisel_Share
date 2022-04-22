@@ -1,0 +1,25 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.SystemVerilogEmitter"
+  },
+  {
+    "class":"chiselTests.VerifAnnotation",
+    "target":"~AnnotationRenameTest|AnnotationRenameTest>howdy"
+  },
+  {
+    "class":"chiselTests.VerifAnnotation",
+    "target":"~AnnotationRenameTest|AnnotationRenameTest>hello"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/VerificationAnnotationRenameTests"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~AnnotationRenameTest|AnnotationRenameTest>io_out",
+    "sources":[
+      "~AnnotationRenameTest|AnnotationRenameTest>io_in"
+    ]
+  }
+]

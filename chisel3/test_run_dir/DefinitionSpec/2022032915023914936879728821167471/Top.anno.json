@@ -1,0 +1,7 @@
+[
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|AddTwoMixedModules/i1:AddOne_1>in",
+    "tag":"blah"
+  }
+]

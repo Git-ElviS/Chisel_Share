@@ -1,0 +1,29 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"chisel3.experimental.EnumAnnotations$EnumComponentAnnotation",
+    "target":"StrongEnumFSMTester.StrongEnumFSM.state",
+    "enumTypeName":"chiselTests.StrongEnumFSM$State"
+  },
+  {
+    "class":"chisel3.experimental.EnumAnnotations$EnumDefAnnotation",
+    "typeName":"chiselTests.StrongEnumFSM$State",
+    "definition":{
+      "sNone":0,
+      "sOne1":1,
+      "sTwo1s":2
+    }
+  },
+  {
+    "class":"chisel3.experimental.EnumAnnotations$EnumComponentAnnotation",
+    "target":"StrongEnumFSMTester.StrongEnumFSM.io_state",
+    "enumTypeName":"chiselTests.StrongEnumFSM$State"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"/Users/caizhongxuan/Chisel/1_code/chisel3/test_run_dir/StrongEnumFSMTester/202203291446074109047233663486381"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i0:HasTypeParams>blah",
+    "tag":"blah"
+  }
+]

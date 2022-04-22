@@ -1,0 +1,30 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.annotations.LoadMemoryAnnotation",
+    "target":"HasBinarySupport.HasBinarySupport.memory",
+    "fileName":"./mem",
+    "hexOrBinary":"b",
+    "originalMemoryNameOpt":"memory"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/binary_memory_load"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~HasBinarySupport|HasBinarySupport>io_value",
+    "sources":[
+      "~HasBinarySupport|HasBinarySupport>io_address"
+    ]
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxInlineAnno",
+    "target":"HasBinarySupport.HasBinarySupport",
+    "name":"HasBinarySupport.HasBinarySupport.memory.v",
+    "text":"module BindsTo_0_HasBinarySupport(\n  input         clock,\n  input         reset,\n  input  [15:0] io_address,\n  output [15:0] io_value\n);\n\ninitial begin\n  $readmemb(\"./mem\", HasBinarySupport.memory);\nend\n                      endmodule\n\nbind HasBinarySupport BindsTo_0_HasBinarySupport BindsTo_0_HasBinarySupport_Inst(.*);"
+  }
+]

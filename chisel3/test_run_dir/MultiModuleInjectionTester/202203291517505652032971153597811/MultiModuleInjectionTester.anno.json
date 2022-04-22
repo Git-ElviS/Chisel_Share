@@ -1,0 +1,30 @@
+[
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~MultiModuleInjectionTester|SubmoduleA",
+    "duplicate":"~MultiModuleInjectionTester|MultiModuleInjectionTester/subA0:SubmoduleA",
+    "index":0.0
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~MultiModuleInjectionTester|SubmoduleA_1",
+    "duplicate":"~MultiModuleInjectionTester|MultiModuleInjectionTester/subA1:SubmoduleA",
+    "index":0.5
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~MultiModuleInjectionTester|MultiModuleInjectionTester/subA1:SubmoduleA>wire"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~MultiModuleInjectionTester|MultiModuleInjectionTester/subA0:SubmoduleA>wire"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"/Users/caizhongxuan/Chisel/1_code/chisel3/test_run_dir/MultiModuleInjectionTester/202203291517505652032971153597811"
+  }
+]

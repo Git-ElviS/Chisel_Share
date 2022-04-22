@@ -1,0 +1,20 @@
+VSyncReadMemWithZeroWidthTester__ALL.o: \
+  VSyncReadMemWithZeroWidthTester__ALL.cpp \
+  VSyncReadMemWithZeroWidthTester.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilatedos.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_config.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_types.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_funcs.h \
+  VSyncReadMemWithZeroWidthTester.cpp \
+  VSyncReadMemWithZeroWidthTester__Syms.h \
+  VSyncReadMemWithZeroWidthTester___024root.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_vcd_c.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_trace.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_trace_defs.h \
+  VSyncReadMemWithZeroWidthTester___024root__DepSet_h94c11a89__0.cpp \
+  VSyncReadMemWithZeroWidthTester__Trace__0.cpp \
+  VSyncReadMemWithZeroWidthTester___024root__Slow.cpp \
+  VSyncReadMemWithZeroWidthTester___024root__DepSet_h94c11a89__0__Slow.cpp \
+  VSyncReadMemWithZeroWidthTester__Syms.cpp \
+  VSyncReadMemWithZeroWidthTester__Trace__0__Slow.cpp

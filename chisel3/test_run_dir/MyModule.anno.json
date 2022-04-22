@@ -1,0 +1,23 @@
+[
+  {
+    "class":"firrtl.stage.FirrtlFileAnnotation",
+    "file":"test_run_dir/MyModule.lo.fir"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.LowFirrtlEmitter"
+  },
+  {
+    "class":"firrtl.transforms.GroupAnnotation",
+    "components":[
+      "MyModule.MyModule.reg1",
+      "MyModule.MyModule.reg3"
+    ],
+    "newModule":"DosRegisters",
+    "newInstance":"doubleReg"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir"
+  }
+]

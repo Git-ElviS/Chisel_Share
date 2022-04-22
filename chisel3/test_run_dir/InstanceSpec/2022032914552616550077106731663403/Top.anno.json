@@ -1,0 +1,12 @@
+[
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:ModuleWithCommonIntf>io.in",
+    "tag":"gotcha"
+  },
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:ModuleWithCommonIntf",
+    "tag":"inst"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~SharedConstantValDedupTop|SharedConstantValDedup",
+    "duplicate":"~SharedConstantValDedupTop|SharedConstantValDedupTop/inst0:SharedConstantValDedup",
+    "index":0.0
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~SharedConstantValDedupTop|SharedConstantValDedup_1",
+    "duplicate":"~SharedConstantValDedupTop|SharedConstantValDedupTop/inst1:SharedConstantValDedup",
+    "index":0.5
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/DedupSpec/2022032915215413765270086284636310"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~SharedConstantValDedupTop|SharedConstantValDedupTop>io_out",
+    "sources":[
+      "~SharedConstantValDedupTop|SharedConstantValDedupTop>io_in"
+    ]
+  }
+]

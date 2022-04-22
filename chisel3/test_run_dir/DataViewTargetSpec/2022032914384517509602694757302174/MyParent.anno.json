@@ -1,0 +1,27 @@
+[
+  {
+    "class":"chiselTests.experimental.DataViewTargetSpec$DummyAnno",
+    "target":"~MyParent|MyChild>out.foo",
+    "id":0
+  },
+  {
+    "class":"chiselTests.experimental.DataViewTargetSpec$DummyAnno",
+    "target":"~MyParent|MyChild>out.foo[0]",
+    "id":1
+  },
+  {
+    "class":"chiselTests.experimental.DataViewTargetSpec$DummyAnno",
+    "target":"~MyParent|MyChild>out.foo[1]",
+    "id":1
+  },
+  {
+    "class":"chiselTests.experimental.DataViewTargetSpec$DummyAnno",
+    "target":"~MyParent|MyParent/inst:MyChild>out.foo",
+    "id":2
+  },
+  {
+    "class":"chiselTests.experimental.DataViewTargetSpec$DummyAnno",
+    "target":"~MyParent|MyParent/inst:MyChild>out",
+    "id":3
+  }
+]

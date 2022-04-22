@@ -1,0 +1,22 @@
+[
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:MyBlackBox>in",
+    "tag":"i.foo"
+  },
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:MyBlackBox>out",
+    "tag":"i.bar"
+  },
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:MyBlackBox>in",
+    "tag":"i.innerView.in"
+  },
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:MyBlackBox>out",
+    "tag":"outerView.out"
+  }
+]

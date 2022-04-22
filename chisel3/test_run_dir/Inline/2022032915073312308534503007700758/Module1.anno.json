@@ -1,0 +1,26 @@
+[
+  {
+    "class":"firrtl.transforms.NoDedupAnnotation",
+    "target":"~Module1|_2_Anon"
+  },
+  {
+    "class":"chisel3.experimental.Trace$TraceNameAnnotation",
+    "target":"~Module1|Module1>m0_i",
+    "chiselTarget":"~Module1|Module1/m0:_2_Anon>i"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"/Users/caizhongxuan/Chisel/1_code/chisel3/test_run_dir/Inline/2022032915073312308534503007700758"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~Module1|Module1>o",
+    "sources":[
+      "~Module1|Module1>i"
+    ]
+  }
+]

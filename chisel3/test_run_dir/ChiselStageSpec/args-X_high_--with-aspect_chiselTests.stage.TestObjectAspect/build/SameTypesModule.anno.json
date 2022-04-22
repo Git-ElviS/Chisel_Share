@@ -1,0 +1,14 @@
+[
+  {
+    "class":"firrtl.stage.FirrtlFileAnnotation",
+    "file":"test_run_dir/ChiselStageSpec/args-X_high_--with-aspect_chiselTests.stage.TestObjectAspect/build/SameTypesModule.hi.fir"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.HighFirrtlEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/ChiselStageSpec/args-X_high_--with-aspect_chiselTests.stage.TestObjectAspect/build"
+  }
+]

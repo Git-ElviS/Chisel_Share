@@ -1,0 +1,60 @@
+circuit AsyncResetSpec_Anon :
+  module AsyncResetSpec_Anon :
+    input clock : Clock
+    input reset : UInt<1>
+    output io : { }
+
+    node _reg_T = asAsyncReset(reset) @[AsyncResetSpec.scala 262:33]
+    wire _reg_WIRE : UInt<8>[4] @[AsyncResetSpec.scala 263:39]
+    _reg_WIRE[0] <= UInt<8>("hd0") @[AsyncResetSpec.scala 263:39]
+    _reg_WIRE[1] <= UInt<8>("hca") @[AsyncResetSpec.scala 263:39]
+    _reg_WIRE[2] <= UInt<8>("hd0") @[AsyncResetSpec.scala 263:39]
+    _reg_WIRE[3] <= UInt<8>("hba") @[AsyncResetSpec.scala 263:39]
+    wire _reg_WIRE_1 : UInt<8>[4] @[AsyncResetSpec.scala 263:82]
+    _reg_WIRE_1[0] <= UInt<8>("hef") @[AsyncResetSpec.scala 263:82]
+    _reg_WIRE_1[1] <= UInt<8>("hbe") @[AsyncResetSpec.scala 263:82]
+    _reg_WIRE_1[2] <= UInt<8>("had") @[AsyncResetSpec.scala 263:82]
+    _reg_WIRE_1[3] <= UInt<8>("hde") @[AsyncResetSpec.scala 263:82]
+    reg reg : UInt<8>[4], clock with :
+      reset => (_reg_T, _reg_WIRE_1) @[AsyncResetSpec.scala 263:16]
+    reg <= _reg_WIRE @[AsyncResetSpec.scala 263:16]
+    reg count : UInt<2>, clock with :
+      reset => (reset, UInt<2>("h0")) @[Counter.scala 62:40]
+    wire done : UInt<1>
+    done <= UInt<1>("h0")
+    when UInt<1>("h1") : @[Counter.scala 120:16]
+      node wrap_wrap = eq(count, UInt<2>("h3")) @[Counter.scala 74:24]
+      node _wrap_value_T = add(count, UInt<1>("h1")) @[Counter.scala 78:24]
+      node _wrap_value_T_1 = tail(_wrap_value_T, 1) @[Counter.scala 78:24]
+      count <= _wrap_value_T_1 @[Counter.scala 78:15]
+      done <= wrap_wrap @[Counter.scala 120:23]
+    node _T = eq(count, UInt<1>("h0")) @[AsyncResetSpec.scala 266:18]
+    when _T : @[AsyncResetSpec.scala 266:27]
+      node lo = cat(reg[1], reg[0]) @[AsyncResetSpec.scala 267:28]
+      node hi = cat(reg[3], reg[2]) @[AsyncResetSpec.scala 267:28]
+      node _T_1 = cat(hi, lo) @[AsyncResetSpec.scala 267:28]
+      node _T_2 = eq(_T_1, UInt<32>("hdeadbeef")) @[AsyncResetSpec.scala 267:35]
+      node _T_3 = bits(reset, 0, 0) @[AsyncResetSpec.scala 267:23]
+      node _T_4 = eq(_T_3, UInt<1>("h0")) @[AsyncResetSpec.scala 267:23]
+      when _T_4 : @[AsyncResetSpec.scala 267:23]
+        assert(clock, _T_2, UInt<1>("h1"), "") : assert @[AsyncResetSpec.scala 267:23]
+        node _T_5 = eq(_T_2, UInt<1>("h0")) @[AsyncResetSpec.scala 267:23]
+        when _T_5 : @[AsyncResetSpec.scala 267:23]
+          printf(clock, UInt<1>("h1"), "Assertion failed\n    at AsyncResetSpec.scala:267 chisel3.assert(reg.asUInt === 0xdeadbeefL.U)\n") : printf @[AsyncResetSpec.scala 267:23]
+    else :
+      node lo_1 = cat(reg[1], reg[0]) @[AsyncResetSpec.scala 269:28]
+      node hi_1 = cat(reg[3], reg[2]) @[AsyncResetSpec.scala 269:28]
+      node _T_6 = cat(hi_1, lo_1) @[AsyncResetSpec.scala 269:28]
+      node _T_7 = eq(_T_6, UInt<32>("hbad0cad0")) @[AsyncResetSpec.scala 269:35]
+      node _T_8 = bits(reset, 0, 0) @[AsyncResetSpec.scala 269:23]
+      node _T_9 = eq(_T_8, UInt<1>("h0")) @[AsyncResetSpec.scala 269:23]
+      when _T_9 : @[AsyncResetSpec.scala 269:23]
+        assert(clock, _T_7, UInt<1>("h1"), "") : assert_1 @[AsyncResetSpec.scala 269:23]
+        node _T_10 = eq(_T_7, UInt<1>("h0")) @[AsyncResetSpec.scala 269:23]
+        when _T_10 : @[AsyncResetSpec.scala 269:23]
+          printf(clock, UInt<1>("h1"), "Assertion failed\n    at AsyncResetSpec.scala:269 chisel3.assert(reg.asUInt === 0xbad0cad0L.U)\n") : printf_1 @[AsyncResetSpec.scala 269:23]
+    when done : @[AsyncResetSpec.scala 271:18]
+      node _T_11 = bits(reset, 0, 0) @[AsyncResetSpec.scala 271:24]
+      node _T_12 = eq(_T_11, UInt<1>("h0")) @[AsyncResetSpec.scala 271:24]
+      when _T_12 : @[AsyncResetSpec.scala 271:24]
+        stop(clock, UInt<1>("h1"), 0) : stop @[AsyncResetSpec.scala 271:24]

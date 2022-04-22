@@ -1,0 +1,14 @@
+circuit Top :
+  module MultiVal :
+    input clock : Clock
+    input reset : Reset
+
+    wire x : UInt<3> @[Examples.scala 177:31]
+    wire y : UInt<3> @[Examples.scala 177:48]
+
+  module Top :
+    input clock : Clock
+    input reset : UInt<1>
+
+    skip
+

@@ -1,0 +1,15 @@
+[
+  {
+    "class":"chisel3.experimental.Trace$TraceNameAnnotation",
+    "target":"~Module0|Module0>i0",
+    "chiselTarget":"~Module0|Module0>i0"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"/Users/caizhongxuan/Chisel/1_code/chisel3/test_run_dir/ConstantProp/2022032915073315788087251642135612"
+  }
+]

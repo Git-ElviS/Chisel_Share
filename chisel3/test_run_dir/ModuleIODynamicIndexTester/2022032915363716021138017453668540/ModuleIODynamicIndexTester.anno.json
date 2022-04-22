@@ -1,0 +1,34 @@
+[
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~ModuleIODynamicIndexTester|PassthroughModule",
+    "duplicate":"~ModuleIODynamicIndexTester|ModuleIODynamicIndexTester/PassthroughModule:PassthroughModule",
+    "index":0.0
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~ModuleIODynamicIndexTester|PassthroughModule_1",
+    "duplicate":"~ModuleIODynamicIndexTester|ModuleIODynamicIndexTester/PassthroughModule_1:PassthroughModule",
+    "index":0.2
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~ModuleIODynamicIndexTester|PassthroughModule_2",
+    "duplicate":"~ModuleIODynamicIndexTester|ModuleIODynamicIndexTester/PassthroughModule_2:PassthroughModule",
+    "index":0.4
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~ModuleIODynamicIndexTester|PassthroughModule_3",
+    "duplicate":"~ModuleIODynamicIndexTester|ModuleIODynamicIndexTester/PassthroughModule_3:PassthroughModule",
+    "index":0.6
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"/Users/caizhongxuan/Chisel/1_code/chisel3/test_run_dir/ModuleIODynamicIndexTester/2022032915363716021138017453668540"
+  }
+]

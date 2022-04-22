@@ -1,0 +1,12 @@
+[
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:HasTuple2>x",
+    "tag":"x"
+  },
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:HasTuple2>y",
+    "tag":"y"
+  }
+]

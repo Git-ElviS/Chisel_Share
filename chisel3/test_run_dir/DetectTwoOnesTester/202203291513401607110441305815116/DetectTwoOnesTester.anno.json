@@ -1,0 +1,24 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"chisel3.experimental.EnumAnnotations$EnumDefAnnotation",
+    "typeName":"cookbook.DetectTwoOnes$State",
+    "definition":{
+      "sNone":0,
+      "sOne1":1,
+      "sTwo1s":2
+    }
+  },
+  {
+    "class":"chisel3.experimental.EnumAnnotations$EnumComponentAnnotation",
+    "target":"DetectTwoOnesTester.DetectTwoOnes.state",
+    "enumTypeName":"cookbook.DetectTwoOnes$State"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"/Users/caizhongxuan/Chisel/1_code/chisel3/test_run_dir/DetectTwoOnesTester/202203291513401607110441305815116"
+  }
+]

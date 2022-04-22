@@ -1,0 +1,29 @@
+[
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~HasDeadCode|HasDeadCode>dead"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~HasDeadCode|HasDeadCodeChild>io_c_0"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~HasDeadCode|HasDeadCodeChild>io_c_1"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/DontTouchSpec/202203291438443143862817222380897"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~HasDeadCode|HasDeadCode>io_b",
+    "sources":[
+      "~HasDeadCode|HasDeadCode>io_a"
+    ]
+  }
+]

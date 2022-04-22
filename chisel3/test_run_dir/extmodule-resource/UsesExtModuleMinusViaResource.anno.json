@@ -1,0 +1,16 @@
+[
+  {
+    "class":"firrtl.transforms.BlackBoxInlineAnno",
+    "target":"UsesExtModuleMinusViaResource.ExtModuleMinus",
+    "name":"BlackBoxTest.v",
+    "text":"module BlackBoxInverter(\n    input  [0:0] in,\n    output [0:0] out\n);\n  assign out = !in;\nendmodule\n\nmodule BlackBoxPassthrough(\n    input  [0:0] in,\n    output [0:0] out\n);\n  assign out = in;\nendmodule\n\nmodule BlackBoxPassthrough2(\n    input  [0:0] in,\n    output [0:0] out\n);\n  assign out = in;\nendmodule\n\nmodule BlackBoxMinus(\n    input  [15:0] in1,\n    input  [15:0] in2,\n    output [15:0] out\n);\n  assign out = in1 + in2;\nendmodule\n\nmodule BlackBoxRegister(\n    input  [0:0] clock,\n    input  [0:0] in,\n    output [0:0] out\n);\n  reg [0:0] register;\n  always @(posedge clock) begin\n    register <= in;\n  end\n  assign out = register;\nendmodule\n\nmodule BlackBoxConstant #(\n  parameter int WIDTH=1,\n  parameter int VALUE=1\n) (\n  output [WIDTH-1:0] out\n);\n  assign out = VALUE;\nendmodule\n\nmodule BlackBoxStringParam #(\n  parameter string STRING = \"zero\"\n) (\n  output [31:0] out\n);\n  assign out = (STRING == \"one\" )? 1 :\n               (STRING == \"two\" )? 2 : 0;\nendmodule\n\nmodule BlackBoxRealParam #(\n  parameter real REAL = 0.0\n) (\n  output [63:0] out\n);\n  assign out = $realtobits(REAL);\nendmodule\n\nmodule BlackBoxTypeParam #(\n  parameter type T = bit\n) (\n  output T out\n);\n  assign out = 32'hdeadbeef;\nendmodule\n"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/extmodule-resource"
+  }
+]

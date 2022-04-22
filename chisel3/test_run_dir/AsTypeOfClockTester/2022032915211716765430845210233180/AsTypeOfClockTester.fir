@@ -1,0 +1,37 @@
+circuit AsTypeOfClockTester :
+  module AsTypeOfClockTester :
+    input clock : Clock
+    input reset : UInt<1>
+    output io : { }
+
+    wire _WIRE : Clock @[AsTypeOfTester.scala 78:25]
+    node _T = asClock(UInt<1>("h1")) @[AsTypeOfTester.scala 78:25]
+    _WIRE <= _T @[AsTypeOfTester.scala 78:25]
+    node _T_1 = asUInt(_WIRE) @[AsTypeOfTester.scala 78:35]
+    node _T_2 = bits(_T_1, 0, 0) @[AsTypeOfTester.scala 78:42]
+    node _T_3 = eq(_T_2, UInt<1>("h1")) @[AsTypeOfTester.scala 78:49]
+    node _T_4 = bits(reset, 0, 0) @[AsTypeOfTester.scala 78:9]
+    node _T_5 = eq(_T_4, UInt<1>("h0")) @[AsTypeOfTester.scala 78:9]
+    when _T_5 : @[AsTypeOfTester.scala 78:9]
+      assert(clock, _T_3, UInt<1>("h1"), "") : assert @[AsTypeOfTester.scala 78:9]
+      node _T_6 = eq(_T_3, UInt<1>("h0")) @[AsTypeOfTester.scala 78:9]
+      when _T_6 : @[AsTypeOfTester.scala 78:9]
+        printf(clock, UInt<1>("h1"), "Assertion failed\n    at AsTypeOfTester.scala:78 assert(true.B.asTypeOf(Clock()).asUInt.asBool === true.B)\n") : printf @[AsTypeOfTester.scala 78:9]
+    wire _WIRE_1 : { x : UInt<4>, y : Clock} @[AsTypeOfTester.scala 80:25]
+    node _T_7 = asClock(UInt<1>("h1")) @[AsTypeOfTester.scala 80:25]
+    _WIRE_1.y <= _T_7 @[AsTypeOfTester.scala 80:25]
+    _WIRE_1.x <= UInt<4>("hf") @[AsTypeOfTester.scala 80:25]
+    node _T_8 = asUInt(_WIRE_1.y) @[AsTypeOfTester.scala 80:40]
+    node _T_9 = cat(_WIRE_1.x, _T_8) @[AsTypeOfTester.scala 80:40]
+    node _T_10 = eq(_T_9, UInt<5>("h1f")) @[AsTypeOfTester.scala 80:47]
+    node _T_11 = bits(reset, 0, 0) @[AsTypeOfTester.scala 80:9]
+    node _T_12 = eq(_T_11, UInt<1>("h0")) @[AsTypeOfTester.scala 80:9]
+    when _T_12 : @[AsTypeOfTester.scala 80:9]
+      assert(clock, _T_10, UInt<1>("h1"), "") : assert_1 @[AsTypeOfTester.scala 80:9]
+      node _T_13 = eq(_T_10, UInt<1>("h0")) @[AsTypeOfTester.scala 80:9]
+      when _T_13 : @[AsTypeOfTester.scala 80:9]
+        printf(clock, UInt<1>("h1"), "Assertion failed\n    at AsTypeOfTester.scala:80 assert(0x1f.U.asTypeOf(new MyBundle).asUInt === 0x1f.U)\n") : printf_1 @[AsTypeOfTester.scala 80:9]
+    node _T_14 = bits(reset, 0, 0) @[AsTypeOfTester.scala 81:7]
+    node _T_15 = eq(_T_14, UInt<1>("h0")) @[AsTypeOfTester.scala 81:7]
+    when _T_15 : @[AsTypeOfTester.scala 81:7]
+      stop(clock, UInt<1>("h1"), 0) : stop @[AsTypeOfTester.scala 81:7]

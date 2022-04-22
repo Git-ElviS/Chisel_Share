@@ -1,0 +1,20 @@
+VCompatibilityInteroperabilitySpec_Anon__ALL.o: \
+  VCompatibilityInteroperabilitySpec_Anon__ALL.cpp \
+  VCompatibilityInteroperabilitySpec_Anon.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilatedos.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_config.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_types.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_funcs.h \
+  VCompatibilityInteroperabilitySpec_Anon.cpp \
+  VCompatibilityInteroperabilitySpec_Anon__Syms.h \
+  VCompatibilityInteroperabilitySpec_Anon___024root.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_vcd_c.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_trace.h \
+  /usr/local/Cellar/verilator/4.220/share/verilator/include/verilated_trace_defs.h \
+  VCompatibilityInteroperabilitySpec_Anon___024root__DepSet_h4dfd23d4__0.cpp \
+  VCompatibilityInteroperabilitySpec_Anon__Trace__0.cpp \
+  VCompatibilityInteroperabilitySpec_Anon___024root__Slow.cpp \
+  VCompatibilityInteroperabilitySpec_Anon___024root__DepSet_h4dfd23d4__0__Slow.cpp \
+  VCompatibilityInteroperabilitySpec_Anon__Syms.cpp \
+  VCompatibilityInteroperabilitySpec_Anon__Trace__0__Slow.cpp

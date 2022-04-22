@@ -1,0 +1,12 @@
+[
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:MyModule>a",
+    "tag":"i.ports"
+  },
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:MyModule>b",
+    "tag":"i.ports"
+  }
+]

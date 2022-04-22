@@ -1,0 +1,87 @@
+circuit LFSRMaxPeriod :
+  module FibonacciLFSR :
+    input clock : Clock
+    input reset : Reset
+    output io : { flip seed : { valid : UInt<1>, bits : UInt<1>[4]}, flip increment : UInt<1>, out : UInt<1>[4]}
+
+    wire _state_WIRE : UInt<1>[4] @[PRNG.scala 46:28]
+    _state_WIRE[0] <= UInt<1>("h1") @[PRNG.scala 46:28]
+    _state_WIRE[1] <= UInt<1>("h0") @[PRNG.scala 46:28]
+    _state_WIRE[2] <= UInt<1>("h0") @[PRNG.scala 46:28]
+    _state_WIRE[3] <= UInt<1>("h0") @[PRNG.scala 46:28]
+    reg state : UInt<1>[4], clock with :
+      reset => (reset, _state_WIRE) @[PRNG.scala 55:49]
+    when io.increment : @[PRNG.scala 69:22]
+      node _T = xor(state[3], state[2]) @[LFSR.scala 20:43]
+      node _T_1 = eq(_T, UInt<1>("h0")) @[LFSR.scala 20:39]
+      state[0] <= _T_1 @[PRNG.scala 70:11]
+      state[1] <= state[0] @[PRNG.scala 70:11]
+      state[2] <= state[1] @[PRNG.scala 70:11]
+      state[3] <= state[2] @[PRNG.scala 70:11]
+    when io.seed.valid : @[PRNG.scala 73:22]
+      state[0] <= io.seed.bits[0] @[PRNG.scala 74:11]
+      state[1] <= io.seed.bits[1] @[PRNG.scala 74:11]
+      state[2] <= io.seed.bits[2] @[PRNG.scala 74:11]
+      state[3] <= io.seed.bits[3] @[PRNG.scala 74:11]
+    io.out <= state @[PRNG.scala 78:10]
+
+  module LFSRMaxPeriod :
+    input clock : Clock
+    input reset : UInt<1>
+    output io : { }
+
+    inst rv_prng of FibonacciLFSR @[PRNG.scala 91:22]
+    rv_prng.clock <= clock
+    rv_prng.reset <= reset
+    rv_prng.io.seed.valid <= UInt<1>("h0") @[PRNG.scala 92:24]
+    rv_prng.io.seed.bits[0] is invalid @[PRNG.scala 93:23]
+    rv_prng.io.seed.bits[1] is invalid @[PRNG.scala 93:23]
+    rv_prng.io.seed.bits[2] is invalid @[PRNG.scala 93:23]
+    rv_prng.io.seed.bits[3] is invalid @[PRNG.scala 93:23]
+    rv_prng.io.increment <= UInt<1>("h1") @[PRNG.scala 94:23]
+    node rv_lo = cat(rv_prng.io.out[1], rv_prng.io.out[0]) @[PRNG.scala 95:17]
+    node rv_hi = cat(rv_prng.io.out[3], rv_prng.io.out[2]) @[PRNG.scala 95:17]
+    node rv = cat(rv_hi, rv_lo) @[PRNG.scala 95:17]
+    reg started : UInt<1>, clock with :
+      reset => (reset, UInt<1>("h0")) @[LFSRSpec.scala 21:24]
+    started <= UInt<1>("h1") @[LFSRSpec.scala 21:24]
+    node _seed_T = eq(started, UInt<1>("h0")) @[LFSRSpec.scala 22:24]
+    reg seed : UInt, clock with :
+      reset => (_seed_T, rv) @[LFSRSpec.scala 22:43]
+    reg wrap_value : UInt<4>, clock with :
+      reset => (reset, UInt<4>("h0")) @[Counter.scala 62:40]
+    wire wrap : UInt<1>
+    wrap <= UInt<1>("h0")
+    when started : @[Counter.scala 120:16]
+      node wrap_wrap_wrap = eq(wrap_value, UInt<4>("he")) @[Counter.scala 74:24]
+      node _wrap_wrap_value_T = add(wrap_value, UInt<1>("h1")) @[Counter.scala 78:24]
+      node _wrap_wrap_value_T_1 = tail(_wrap_wrap_value_T, 1) @[Counter.scala 78:24]
+      wrap_value <= _wrap_wrap_value_T_1 @[Counter.scala 78:15]
+      when wrap_wrap_wrap : @[Counter.scala 88:20]
+        wrap_value <= UInt<1>("h0") @[Counter.scala 88:28]
+      wrap <= wrap_wrap_wrap @[Counter.scala 120:23]
+    node _T = eq(rv, seed) @[LFSRSpec.scala 26:11]
+    node _T_1 = and(_T, started) @[LFSRSpec.scala 26:20]
+    when _T_1 : @[LFSRSpec.scala 26:32]
+      node _T_2 = bits(reset, 0, 0) @[LFSRSpec.scala 27:19]
+      node _T_3 = eq(_T_2, UInt<1>("h0")) @[LFSRSpec.scala 27:19]
+      when _T_3 : @[LFSRSpec.scala 27:19]
+        assert(clock, wrap, UInt<1>("h1"), "") : assert @[LFSRSpec.scala 27:19]
+        node _T_4 = eq(wrap, UInt<1>("h0")) @[LFSRSpec.scala 27:19]
+        when _T_4 : @[LFSRSpec.scala 27:19]
+          printf(clock, UInt<1>("h1"), "Assertion failed\n    at LFSRSpec.scala:27 chisel3.assert(wrap)\n") : printf @[LFSRSpec.scala 27:19]
+      node _T_5 = bits(reset, 0, 0) @[LFSRSpec.scala 28:9]
+      node _T_6 = eq(_T_5, UInt<1>("h0")) @[LFSRSpec.scala 28:9]
+      when _T_6 : @[LFSRSpec.scala 28:9]
+        stop(clock, UInt<1>("h1"), 0) : stop @[LFSRSpec.scala 28:9]
+    reg last : UInt, clock with :
+      reset => (UInt<1>("h0"), last) @[LFSRSpec.scala 31:21]
+    last <= rv @[LFSRSpec.scala 31:21]
+    node _T_7 = neq(rv, last) @[LFSRSpec.scala 32:21]
+    node _T_8 = bits(reset, 0, 0) @[LFSRSpec.scala 32:17]
+    node _T_9 = eq(_T_8, UInt<1>("h0")) @[LFSRSpec.scala 32:17]
+    when _T_9 : @[LFSRSpec.scala 32:17]
+      assert(clock, _T_7, UInt<1>("h1"), "") : assert_1 @[LFSRSpec.scala 32:17]
+      node _T_10 = eq(_T_7, UInt<1>("h0")) @[LFSRSpec.scala 32:17]
+      when _T_10 : @[LFSRSpec.scala 32:17]
+        printf(clock, UInt<1>("h1"), "Assertion failed: LFSR last value (0b%b) was equal to current value (0b%b)\n    at LFSRSpec.scala:32 chisel3.assert(rv =/= last, \"LFSR last value (0b%%b) was equal to current value (0b%%b)\", rv, last)\n", rv, last) : printf_1 @[LFSRSpec.scala 32:17]

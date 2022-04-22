@@ -1,0 +1,17 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/DontTouchSpec/202203291438409171308783639654251"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~HasDeadCode|HasDeadCode>io_b",
+    "sources":[
+      "~HasDeadCode|HasDeadCode>io_a"
+    ]
+  }
+]

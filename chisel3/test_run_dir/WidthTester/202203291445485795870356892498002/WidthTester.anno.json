@@ -1,0 +1,21 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"chisel3.experimental.EnumAnnotations$EnumDefAnnotation",
+    "typeName":"chiselTests.EnumExample",
+    "definition":{
+      "e1":1,
+      "e101":101,
+      "e0":0,
+      "e100":100,
+      "e2":2
+    }
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"/Users/caizhongxuan/Chisel/1_code/chisel3/test_run_dir/WidthTester/202203291445485795870356892498002"
+  }
+]

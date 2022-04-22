@@ -1,0 +1,12 @@
+[
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:HasCMAR/c:AggregatePortModule>io",
+    "tag":"i.c.io"
+  },
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:HasCMAR/c:AggregatePortModule>io.out",
+    "tag":"i.c.io.out"
+  }
+]

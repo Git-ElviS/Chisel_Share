@@ -1,0 +1,29 @@
+circuit TabulateTester2D :
+  module TabulateTester2D :
+    input clock : Clock
+    input reset : UInt<1>
+    output io : { }
+
+    wire vec : UInt<1>[2][1] @[Vec.scala 136:38]
+    vec[0][0] <= UInt<1>("h0") @[Vec.scala 136:38]
+    vec[0][1] <= UInt<1>("h1") @[Vec.scala 136:38]
+    node _T = eq(vec[0][0], UInt<1>("h0")) @[Vec.scala 123:41]
+    node _T_1 = bits(reset, 0, 0) @[Vec.scala 123:35]
+    node _T_2 = eq(_T_1, UInt<1>("h0")) @[Vec.scala 123:35]
+    when _T_2 : @[Vec.scala 123:35]
+      assert(clock, _T, UInt<1>("h1"), "") : assert @[Vec.scala 123:35]
+      node _T_3 = eq(_T, UInt<1>("h0")) @[Vec.scala 123:35]
+      when _T_3 : @[Vec.scala 123:35]
+        printf(clock, UInt<1>("h1"), "Assertion failed\n    at Vec.scala:123 compareRow.foreach(x => assert(x._1 === x._2.U))\n") : printf @[Vec.scala 123:35]
+    node _T_4 = eq(vec[0][1], UInt<1>("h1")) @[Vec.scala 123:41]
+    node _T_5 = bits(reset, 0, 0) @[Vec.scala 123:35]
+    node _T_6 = eq(_T_5, UInt<1>("h0")) @[Vec.scala 123:35]
+    when _T_6 : @[Vec.scala 123:35]
+      assert(clock, _T_4, UInt<1>("h1"), "") : assert_1 @[Vec.scala 123:35]
+      node _T_7 = eq(_T_4, UInt<1>("h0")) @[Vec.scala 123:35]
+      when _T_7 : @[Vec.scala 123:35]
+        printf(clock, UInt<1>("h1"), "Assertion failed\n    at Vec.scala:123 compareRow.foreach(x => assert(x._1 === x._2.U))\n") : printf_1 @[Vec.scala 123:35]
+    node _T_8 = bits(reset, 0, 0) @[Vec.scala 140:9]
+    node _T_9 = eq(_T_8, UInt<1>("h0")) @[Vec.scala 140:9]
+    when _T_9 : @[Vec.scala 140:9]
+      stop(clock, UInt<1>("h1"), 0) : stop @[Vec.scala 140:9]

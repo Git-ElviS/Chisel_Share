@@ -1,0 +1,15 @@
+[
+  {
+    "class":"firrtl.transforms.BlackBoxPathAnno",
+    "target":"UsesExtModuleMinusViaPath.ExtModuleMinusPath",
+    "path":"/Users/caizhongxuan/Chisel/1_code/chisel3/src/test/resources/chisel3/BlackBoxTest.v"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/extmodule-path"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:HasSubFieldAccess>in.valid",
+    "tag":"valid"
+  },
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~Top|Top/i:HasSubFieldAccess>in.bits",
+    "tag":"bits"
+  }
+]

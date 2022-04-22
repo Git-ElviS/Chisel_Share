@@ -1,0 +1,7 @@
+[
+  {
+    "class":"chiselTests.experimental.hierarchy.Annotations$MarkAnnotation",
+    "target":"~AddTwo|AddTwo/i0:AddOne>innerWire",
+    "tag":"third"
+  }
+]

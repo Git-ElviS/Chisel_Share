@@ -1,0 +1,41 @@
+circuit ClipSqueezeWrapDemo :
+  module ClipSqueezeWrapDemo :
+    input clock : Clock
+    input reset : UInt<1>
+    output io : { }
+
+    reg counter : Interval[-10, 33].0, clock with :
+      reset => (reset, asInterval(UInt<3>("h4"), -4, -4, 0)) @[IntervalSpec.scala 202:24]
+    node _counter_T = add(counter, asInterval(UInt<2>("h1"), 1, 1, 0)) @[IntervalSpec.scala 204:23]
+    node _counter_T_1 = squz(_counter_T, counter) @[IntervalSpec.scala 204:43]
+    counter <= _counter_T_1 @[IntervalSpec.scala 204:11]
+    node _T = gt(counter, asInterval(UInt<6>("h1e"), 30, 30, 0)) @[IntervalSpec.scala 205:16]
+    when _T : @[IntervalSpec.scala 205:28]
+      node _T_1 = bits(reset, 0, 0) @[IntervalSpec.scala 206:9]
+      node _T_2 = eq(_T_1, UInt<1>("h0")) @[IntervalSpec.scala 206:9]
+      when _T_2 : @[IntervalSpec.scala 206:9]
+        stop(clock, UInt<1>("h1"), 0) : stop @[IntervalSpec.scala 206:9]
+    node _clipped_T = asInterval(UInt<1>("h0"), -4, 17, 0) @[IntervalSpec.scala 209:44]
+    node clipped = clip(counter, _clipped_T) @[IntervalSpec.scala 209:29]
+    node _squeezed_T = asInterval(UInt<1>("h0"), -4, 17, 0) @[IntervalSpec.scala 210:48]
+    node squeezed = squz(counter, _squeezed_T) @[IntervalSpec.scala 210:33]
+    node _wrapped_T = asInterval(UInt<1>("h0"), -4, 17, 0) @[IntervalSpec.scala 211:44]
+    node wrapped = wrap(counter, _wrapped_T) @[IntervalSpec.scala 211:29]
+    node _T_3 = eq(counter, asInterval(UInt<3>("h4"), -4, -4, 0)) @[IntervalSpec.scala 213:16]
+    when _T_3 : @[IntervalSpec.scala 213:32]
+      node _T_4 = bits(reset, 0, 0) @[IntervalSpec.scala 214:11]
+      node _T_5 = eq(_T_4, UInt<1>("h0")) @[IntervalSpec.scala 214:11]
+      when _T_5 : @[IntervalSpec.scala 214:11]
+        printf(clock, UInt<1>("h1"), "Target range is range\"[-10,33].0\"\n") : printf @[IntervalSpec.scala 214:11]
+      node _T_6 = bits(reset, 0, 0) @[IntervalSpec.scala 215:11]
+      node _T_7 = eq(_T_6, UInt<1>("h0")) @[IntervalSpec.scala 215:11]
+      when _T_7 : @[IntervalSpec.scala 215:11]
+        printf(clock, UInt<1>("h1"), "value     clip      squeeze      wrap\n") : printf_1 @[IntervalSpec.scala 215:11]
+    node _T_8 = asSInt(counter) @[IntervalSpec.scala 220:19]
+    node _T_9 = asSInt(clipped) @[IntervalSpec.scala 221:19]
+    node _T_10 = asSInt(squeezed) @[IntervalSpec.scala 222:20]
+    node _T_11 = asSInt(wrapped) @[IntervalSpec.scala 223:19]
+    node _T_12 = bits(reset, 0, 0) @[IntervalSpec.scala 218:9]
+    node _T_13 = eq(_T_12, UInt<1>("h0")) @[IntervalSpec.scala 218:9]
+    when _T_13 : @[IntervalSpec.scala 218:9]
+      printf(clock, UInt<1>("h1"), "       %d       %d          %d         %d\n", _T_8, _T_9, _T_10, _T_11) : printf_2 @[IntervalSpec.scala 218:9]

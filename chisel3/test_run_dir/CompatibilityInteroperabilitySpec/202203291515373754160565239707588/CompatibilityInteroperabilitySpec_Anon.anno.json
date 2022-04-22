@@ -1,0 +1,30 @@
+[
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~CompatibilityInteroperabilitySpec_Anon|PassthroughModule",
+    "duplicate":"~CompatibilityInteroperabilitySpec_Anon|CompatibilityInteroperabilitySpec_Anon/children_0:PassthroughModule",
+    "index":0.0
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~CompatibilityInteroperabilitySpec_Anon|PassthroughMultiIOModule",
+    "duplicate":"~CompatibilityInteroperabilitySpec_Anon|CompatibilityInteroperabilitySpec_Anon/children_1:PassthroughModule",
+    "index":0.3333333333333333
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/CompatibilityInteroperabilitySpec/202203291515373754160565239707588"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~CompatibilityInteroperabilitySpec_Anon|CompatibilityInteroperabilitySpec_Anon>io_out",
+    "sources":[
+      "~CompatibilityInteroperabilitySpec_Anon|CompatibilityInteroperabilitySpec_Anon>io_cond",
+      "~CompatibilityInteroperabilitySpec_Anon|CompatibilityInteroperabilitySpec_Anon>io_in"
+    ]
+  }
+]

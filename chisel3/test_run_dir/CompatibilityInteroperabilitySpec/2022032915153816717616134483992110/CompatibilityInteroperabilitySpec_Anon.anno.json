@@ -1,0 +1,19 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/CompatibilityInteroperabilitySpec/2022032915153816717616134483992110"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~CompatibilityInteroperabilitySpec_Anon|CompatibilityInteroperabilitySpec_Anon>io_out",
+    "sources":[
+      "~CompatibilityInteroperabilitySpec_Anon|CompatibilityInteroperabilitySpec_Anon>io_en",
+      "~CompatibilityInteroperabilitySpec_Anon|CompatibilityInteroperabilitySpec_Anon>io_in",
+      "~CompatibilityInteroperabilitySpec_Anon|CompatibilityInteroperabilitySpec_Anon>reset"
+    ]
+  }
+]

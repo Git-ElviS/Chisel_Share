@@ -1,0 +1,49 @@
+// Verilated -*- C++ -*-
+// DESCRIPTION: Verilator output: Design internal header
+// See VAsyncResetQueueTester.h for the primary calling header
+
+#ifndef VERILATED_VASYNCRESETQUEUETESTER___024ROOT_H_
+#define VERILATED_VASYNCRESETQUEUETESTER___024ROOT_H_  // guard
+
+#include "verilated.h"
+
+class VAsyncResetQueueTester__Syms;
+VL_MODULE(VAsyncResetQueueTester___024root) {
+  public:
+
+    // DESIGN SPECIFIC STATE
+    VL_IN8(clock,0,0);
+    CData/*0:0*/ AsyncResetQueueTester__DOT__queue_clock;
+    CData/*0:0*/ AsyncResetQueueTester__DOT__asyncResetNext;
+    VL_IN8(reset,0,0);
+    CData/*2:0*/ AsyncResetQueueTester__DOT__queue_io_count;
+    CData/*1:0*/ AsyncResetQueueTester__DOT__cDiv_value;
+    CData/*1:0*/ AsyncResetQueueTester__DOT___cDiv_wrap_value_T_1;
+    CData/*3:0*/ AsyncResetQueueTester__DOT__count;
+    CData/*3:0*/ AsyncResetQueueTester__DOT___wrap_value_T_1;
+    CData/*0:0*/ AsyncResetQueueTester__DOT__doCheck;
+    CData/*1:0*/ AsyncResetQueueTester__DOT__queue__DOT__enq_ptr_value;
+    CData/*0:0*/ AsyncResetQueueTester__DOT__queue__DOT__maybe_full;
+    CData/*0:0*/ AsyncResetQueueTester__DOT__queue__DOT__full;
+    CData/*1:0*/ AsyncResetQueueTester__DOT__queue__DOT___value_T_1;
+    CData/*0:0*/ __VinpClk__TOP__AsyncResetQueueTester__DOT__asyncResetNext;
+    CData/*0:0*/ __Vclklast__TOP__clock;
+    CData/*0:0*/ __Vclklast__TOP____VinpClk__TOP__AsyncResetQueueTester__DOT__asyncResetNext;
+    CData/*0:0*/ __Vclklast__TOP__AsyncResetQueueTester__DOT__queue_clock;
+    CData/*0:0*/ __Vchglast__TOP__AsyncResetQueueTester__DOT__asyncResetNext;
+    VlUnpacked<CData/*0:0*/, 3> __Vm_traceActivity;
+
+    // INTERNAL VARIABLES
+    VAsyncResetQueueTester__Syms* vlSymsp;  // Symbol table
+
+    // CONSTRUCTORS
+    VAsyncResetQueueTester___024root(const char* name);
+    ~VAsyncResetQueueTester___024root();
+    VL_UNCOPYABLE(VAsyncResetQueueTester___024root);
+
+    // INTERNAL METHODS
+    void __Vconfigure(VAsyncResetQueueTester__Syms* symsp, bool first);
+} VL_ATTR_ALIGNED(VL_CACHE_LINE_BYTES);
+
+
+#endif  // guard
