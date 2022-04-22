@@ -1,0 +1,37 @@
+$date
+2022-04-06T05:17+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module GCD $end
+ $var wire 1 ! io_e $end
+ $var wire 7 " io_z $end
+ $var wire 7 # io_b $end
+ $var wire 7 $ _GEN_1 $end
+ $var wire 7 % y $end
+ $var wire 1 & clock $end
+ $var wire 7 ' x $end
+ $var wire 1 ( io_v $end
+ $var wire 7 ) _GEN_0 $end
+ $var wire 7 * io_a $end
+ $var wire 1 + reset $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+b0000000 *
+b0000000 '
+0&
+b0000000 #
+0+
+b0000000 $
+b0000000 %
+b0000000 "
+0!
+b0000000 )
+0(
+$end

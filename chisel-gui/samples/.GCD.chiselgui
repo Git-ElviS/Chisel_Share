@@ -1,0 +1,8 @@
+window_size,1000,600
+signal_node,1,0,io_b,io_b,none,close
+cursor-position,26
+wave-colors,default
+scale-and-window,10.0,0
+aggregate_decoupled,true
+show_signal_selector,true
+show_input_panel,true
