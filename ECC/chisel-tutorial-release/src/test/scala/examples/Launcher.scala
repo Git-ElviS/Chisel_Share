@@ -51,6 +51,11 @@ object Launcher {
           (c) => new Adder4Tests(c)
         }
       },
+      "MM" -> { (manager: TesterOptionsManager) =>
+        Driver.execute(() => new nn_mul_mod(), manager) {
+          (c) => new nn_mul_modTests(c)
+        }
+      },
       "SimpleALU" -> { (manager: TesterOptionsManager) =>
         Driver.execute(() => new SimpleALU(), manager) {
           (c) => new SimpleALUTests(c)
