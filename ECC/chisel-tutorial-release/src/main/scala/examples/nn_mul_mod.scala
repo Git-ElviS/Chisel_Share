@@ -5,37 +5,46 @@ import chisel3._
 import chisel3.util._
 
 //A 4-bit adder with carry in and carry out
-class nn_mul_mod extends Module {
+class nn_mul_mod(val n:Int) extends Module {
   val io = IO(new Bundle {
-    val A    = Input(UInt(4.W))
-    val B    = Input(UInt(4.W))
-    val Cin  = Input(UInt(1.W))
-    val Sum  = Output(UInt(4.W))
-    val Cout = Output(UInt(1.W))
+    val in1    = Input(UInt(n.W))
+    val in1    = Input(UInt(n.W))
+    val p  = Input(UInt(n.W))
+    val out  = Output(UInt(n.W))
   })
-  //Adder for bit 0
-  val Adder0 = Module(new nn_compute_redc1_coefs())
-  Adder0.io.a := io.A(0)
-  Adder0.io.b := io.B(0)
-  Adder0.io.cin := io.Cin
-  val s0 = Adder0.io.sum
-  //Adder for bit 1
-  val Adder1 = Module(new nn_compute_redc1_coefs())
-  Adder1.io.a := io.A(1)
-  Adder1.io.b := io.B(1)
-  Adder1.io.cin := Adder0.io.cout
-  val s1 = Cat(Adder1.io.sum, s0)
-  //Adder for bit 2
-  val Adder2 = Module(new nn_compute_redc1_coefs())
-  Adder2.io.a := io.A(2)
-  Adder2.io.b := io.B(2)
-  Adder2.io.cin := Adder1.io.cout
-  val s2 = Cat(Adder2.io.sum, s1)
-  //Adder for bit 3
-  val Adder3 = Module(new nn_compute_redc1_coefs())
-  Adder3.io.a := io.A(3)
-  Adder3.io.b := io.B(3)
-  Adder3.io.cin := Adder2.io.cout
-  io.Sum := Cat(Adder3.io.sum, s2).asUInt
-  io.Cout := Adder3.io.cout
+  
+  val compute_redc1_coefs = Module(new nn_compute_redc1_coefs(val n:Int))
+  compute_redc1_coefs.io.p_in := io.p
+  val r = compute_redc1_coefs.io.r
+  val r_sruare = compute_redc1_coefs.io.r_sruare
+  val mpinv = compute_redc1_coefs.io.,mpinv
+
+  val mul_redc1_1 = Module(new nn_mul_redc1(val n:Int))
+  mul_redc1_1.io.in1 := io.in1
+  mul_redc1_1.io.in2 := r_sruare
+  mul_redc1_1.io.p := io.p
+  mul_redc1_1.io.mpinv := mpinv
+  val in1_tmp = mul_redc1_1.io.out
+
+  val mul_redc1_2 = Module(new nn_mul_redc1(val n:Int))
+  mul_redc1_2.io.in1 := io.in2
+  mul_redc1_2.io.in2 := r_sruare
+  mul_redc1_2.io.p := io.p
+  mul_redc1_2.io.mpinv := mpinv
+  val in2_tmp = mul_redc1_2.io.out
+
+  val mul_redc1_3 = Module(new nn_mul_redc1(val n:Int))
+  mul_redc1_3.io.in1 := in1_tmp
+  mul_redc1_3.io.in2 := in2_tmp
+  mul_redc1_3.io.p := io.p
+  mul_redc1_3.io.mpinv := mpinv
+  val tmp = mul_redc1_3.io.out
+
+  val mul_redc1_4 = Module(new nn_mul_redc1(val n:Int))
+  mul_redc1_4.io.in1 := tmp
+  mul_redc1_4.io.in2 := 1
+  mul_redc1_4.io.p := io.p
+  mul_redc1_4.io.mpinv := mpinv
+  io.out = mul_redc1_4.io.out
+
 }
