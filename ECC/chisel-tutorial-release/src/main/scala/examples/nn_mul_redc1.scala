@@ -14,5 +14,16 @@ class nn_mul_redc1(val n:Int) extends Module {
         val out  = Output(UInt(n.W))
     })
 
+    var tmp_out = 0.U
 
+    tmp_out = io.in1 * io.in2
+    var m = tmp_out * io.mpinv
+    m = m * io.p
+    tmp_out = tmp_out + m
+
+    when(tmp_out > io.p){
+        tmp_out = tmp_out - io.p
+    }
+
+    io.out := tmp_out
 }
