@@ -12,7 +12,7 @@ class nn_compute_redc1_coefs(val n:Int) extends Module {
     val mpinv = Output(UInt(n.W))
   })
 
-  val tmp_nn1 = 1
+  var tmp_nn1 = 1.U
   val tmp_nn2 = tmp_nn1
  
   //nn_modinv_2exp()
@@ -26,8 +26,9 @@ class nn_compute_redc1_coefs(val n:Int) extends Module {
   io.mpinv := tmp_nn1
 
   /* r = 0x1 << p_rounded_bitlen*/
-  val r = 1 << n
-  io.r := r % io.p_in
+  val r = 1.U << n
+  val out_r = r % io.p_in
+  io.r := out_r
 
   val r_sruare = r*r
   io.r_sruare := r_sruare % io.p_in

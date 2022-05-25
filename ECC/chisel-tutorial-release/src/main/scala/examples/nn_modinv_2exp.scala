@@ -12,23 +12,23 @@ class nn_modinv_2exp extends Module {
         val out = Output(UInt(32.W))
     })
 
-    val cnt = 1
-    val mask = 0xffffffff
-    val tmp_out = 1
-    val tmp_sqr = 0
-    val tmp_mul = 0
+    val cnt = 1.U
+    val mask = 0xffffffff.U
+    var tmp_out = 1.U
+    var tmp_sqr = 0.U
+    var tmp_mul = 0.U
 
     for (i <- 0 until 8) {
         tmp_sqr = tmp_out*tmp_out
         tmp_mul = tmp_sqr * io.x
-        tmp_out =  tmp_out << 1
+        tmp_out =  tmp_out << 1.U
         tmp_out = tmp_out - tmp_mul
     }
 
     for (i <- 0 until 4) {
         tmp_sqr = tmp_out*tmp_out
         tmp_mul = tmp_sqr * io.x
-        tmp_out =  tmp_out << 1
+        tmp_out =  tmp_out << 1.U
         tmp_out = tmp_out - tmp_mul
     }
     
