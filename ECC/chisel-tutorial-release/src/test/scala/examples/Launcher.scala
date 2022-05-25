@@ -52,7 +52,7 @@ object Launcher {
         }
       },
       "MM" -> { (manager: TesterOptionsManager) =>
-        Driver.execute(() => new nn_mul_mod(), manager) {
+        Driver.execute(() => new nn_mul_mod(32), manager) {
           (c) => new nn_mul_modTests(c)
         }
       },

@@ -13,7 +13,7 @@ class nn_modinv_2exp extends Module {
     })
 
     val cnt = 1.U
-    val mask = 0xffffffff.U
+    //val mask = 0xffffffff.U
     var tmp_out = 1.U
     var tmp_sqr = 0.U
     var tmp_mul = 0.U
@@ -32,7 +32,7 @@ class nn_modinv_2exp extends Module {
         tmp_out = tmp_out - tmp_mul
     }
     
-    tmp_out = tmp_out & mask
+    //tmp_out = tmp_out & mask
 
     io.out := tmp_out
 }
