@@ -5,9 +5,9 @@ import chisel3.iotesters.{PeekPokeTester, Driver, ChiselFlatSpec}
 
 class nn_mul_modTests(c: nn_mul_mod) extends PeekPokeTester(c) {
   val rnd2 = rnd.nextInt(2)
-  for (t <- 0 until 1) {
-    val rnd0 = 73//rnd.nextInt(16)
-    val rnd1 = 15//rnd.nextInt(16)
+  for (t <- 0 until 10) {
+    val rnd0 = rnd.nextInt(16)
+    val rnd1 = rnd.nextInt(16)
     val rnd2 = 17//rnd.nextInt(2)
     println("#@# in1: "+ rnd0)
     println("#@# in2: "+ rnd1)

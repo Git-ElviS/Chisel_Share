@@ -30,7 +30,7 @@ class nn_compute_redc1_coefs(val n:Int) extends Module {
   io.mpinv := tmp_nn & 0xffff.U
 
   /* r = 0x1 << p_rounded_bitlen*/
-  val r = 1.U << 16
+  val r = 1.U << (n>>2)
   val out_r = r % io.p_in
   io.r := out_r
 
