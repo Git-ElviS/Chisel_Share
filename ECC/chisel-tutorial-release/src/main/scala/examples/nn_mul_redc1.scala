@@ -18,12 +18,18 @@ class nn_mul_redc1(val n:Int) extends Module {
 
     tmp_out = io.in1 * io.in2
     var m = tmp_out * io.mpinv
-    m = m * io.p
-    tmp_out = tmp_out + m
+    //printf("#2# m= %x\n", m);
+    m = (m & 0xffff.U) * io.p
+    var out = m >> 16
+    //printf("#3# out= %x\n", out);
 
-    when(tmp_out > io.p){
-        tmp_out = tmp_out - io.p
+    when(((m+tmp_out)&0xffff.U)< tmp_out){
+        out = out + 1.U
     }
-
-    io.out := tmp_out
+    //printf("#4# out= %x\n", out);
+    when(out > io.p){
+        io.out := out - io.p
+    } .otherwise{
+        io.out := out
+    }
 }

@@ -9,11 +9,11 @@ class nn_mul_modTests(c: nn_mul_mod) extends PeekPokeTester(c) {
     val rnd0 = 73//rnd.nextInt(16)
     val rnd1 = 15//rnd.nextInt(16)
     val rnd2 = 17//rnd.nextInt(2)
-    println("in1: "+ rnd0)
-    println("in2: "+ rnd1)
+    println("#@# in1: "+ rnd0)
+    println("#@# in2: "+ rnd1)
     println("p: "+ rnd2)
     val ret = (rnd0 * rnd1) % rnd2
-    println("out: "+ ret)
+    println("#@# out: "+ ret)
 
     poke(c.io.in1,   rnd0)
     poke(c.io.in2,   rnd1)
